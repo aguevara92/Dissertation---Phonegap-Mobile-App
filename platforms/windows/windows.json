@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "pushwoosh-cordova-plugin": {
+            "LOG_LEVEL": "DEBUG",
+            "IOS_FOREGROUND_ALERT_TYPE": "NONE",
+            "ANDROID_FOREGROUND_PUSH": "false",
+            "PACKAGE_NAME": "Push"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "pushwoosh-cordova-plugin.PushNotification",
+            "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
+            "pluginId": "pushwoosh-cordova-plugin",
+            "clobbers": [
+                "plugins.pushNotification"
+            ]
+        },
+        {
+            "id": "pushwoosh-cordova-plugin.PushwooshPluginProxy",
+            "file": "plugins/pushwoosh-cordova-plugin/src/windows/PushwooshPluginProxy.js",
+            "pluginId": "pushwoosh-cordova-plugin",
+            "merges": [
+                ""
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "pushwoosh-cordova-plugin": "6.5.0"
+    }
+}

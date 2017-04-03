@@ -1,0 +1,31 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "pushwoosh-cordova-plugin": {
+            "LOG_LEVEL": "DEBUG",
+            "IOS_FOREGROUND_ALERT_TYPE": "NONE",
+            "ANDROID_FOREGROUND_PUSH": "false",
+            "PACKAGE_NAME": "com.aguevara.push"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
+            "id": "pushwoosh-cordova-plugin.PushNotification",
+            "pluginId": "pushwoosh-cordova-plugin",
+            "clobbers": [
+                "plugins.pushNotification"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "pushwoosh-cordova-plugin": "6.5.0"
+    }
+}
