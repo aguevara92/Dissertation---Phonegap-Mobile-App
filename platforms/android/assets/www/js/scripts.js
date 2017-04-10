@@ -168,6 +168,13 @@ $('#callStudent').on("click", function() {
     window.open('tel:' + phone, '_system');
 });
 
+// Call current student
+$('.make-a-call-button').on("click", function() {
+	var phone = this.getAttribute('data-myattr');
+    window.open('tel:' + phone, '_system');
+});
+
+
 /* LOGOUT */
 $("#logout").click(function(){
 	localStorage.login="false";
