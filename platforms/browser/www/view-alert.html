@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Signup</title>
+        <meta name="description" content="Crimestoppers App">
+        <meta name="author" content="Andres Guevara">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' *; img-src * data: 'unsafe-inline'">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    </head>
+
+    <body onload="onDeviceReady()" class="admin">
+
+        <div class="container">  
+            
+            <h3><i class="icon-icons-01"></i>Alert by <span id="firstname"></span> <span id="lastname"></span></h3>
+            
+            <div class="padding">
+                <p><span class="icon-assignment_ind"></span>Student ID: <span id="student_id"></span> </p>
+                <p>Phone Number: <span id="phone"></span> </p>
+                <p>At <span id="time"></span> </p>
+
+                <div class="admin-action-buttons">
+                    <div class="half-button" id="callStudent">
+                        <span class="icon-phone"></span>
+                        Call student
+                    </div>
+                    <div class="half-button" id="sendPushStudent">
+                        <span class="icon-textsms"></span>
+                        "I'm on my way"
+                    </div>
+                </div>
+
+            </div>
+                      
+            <div id="map" style="width:100%; height: 60vh"></div>
+
+            <div class="centered-button" id="solve-alert">
+                <span class="icon-thumb_up"> </span>
+                Mark as Solved
+            </div>
+
+            <a href="admin-view.html" class="back-button">
+                <span class="icon-navigate_before"></span>
+                Go Back
+            </a>
+  
+            
+        </div>
+
+
+        <script defer='defer'>  
+
+            function getQueryVariable(variable)
+            {
+                   var query = window.location.search.substring(1);
+                   var vars = query.split("&");
+                   for (var i=0;i<vars.length;i++) {
+                           var pair = vars[i].split("=");
+                           if(pair[0] == variable){return pair[1];}
+                   }
+                   return(false);
+            }
+
+            var latitude = Number(getQueryVariable("lat"));
+            var longitude = Number(getQueryVariable("lon"));
+            var firstname = getQueryVariable("firstname");
+            var lastname = getQueryVariable("lastname");
+            var phone = getQueryVariable("phone");
+            var student_id = getQueryVariable("student_id");
+            var alert_id = getQueryVariable("alert_id");
+
+
+            
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: {
+                        lat: latitude,
+                        lng: longitude
+                    },
+                });
+                
+                // Define the Bounds for Park Campus Image
+                var parkCampusBounds = {
+                    north: 52.27714270862537,
+                    south: 52.26944895758475,
+                    east: -0.877967431182924,
+                    west: -0.8880983515930438
+                };      
+                ParkOverlay = new google.maps.GroundOverlay(
+                    'images/park-campus.png',
+                    parkCampusBounds);
+                ParkOverlay.setMap(map);
+                
+                
+                // Define the Bounds for Avenue Campus Image
+                var avenueCampusBounds = {
+                    north: 52.252733879687426,
+                    south: 52.24984151207407,
+                    east: -0.8875974854888682,
+                    west: -0.8941320714416179
+                };      
+                AvenueOverlay = new google.maps.GroundOverlay(
+                    'images/avenue-campus.png',
+                    avenueCampusBounds);
+                AvenueOverlay.setMap(map);
+            
+                
+                var marker = new google.maps.Marker({
+                    position: {
+                        lat: latitude,
+                        lng: longitude
+                    },
+                    title:"Alert Here!"
+                });
+                
+                marker.setMap(map);
+                
+            } 
+
+            /* Display the alert info */
+            document.getElementById('firstname').innerText = firstname;
+            document.getElementById('lastname').innerText = lastname;
+            document.getElementById('phone').innerText = phone; 
+            document.getElementById('student_id').innerText = student_id;
+            document.getElementById('alert_id').innerText = alert_id;
+            
+            
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOmcVLZmqK8UKOinuhjGHXljMxTd5fYsE&callback=initMap" async defer></script>
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/fastClick.js"></script>
+        <script src="js/jquery-touch.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

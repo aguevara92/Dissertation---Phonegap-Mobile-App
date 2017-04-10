@@ -1,0 +1,248 @@
+
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crimestoppers</title>
+    <meta name="description" content="Crimestoppers App">
+    <meta name="author" content="Andres Guevara">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload="onDeviceReady()" class="user-view">
+
+    <!--  SETTINGS MODAL  -->
+    <section class="cd-section">
+      <div class="cd-modal-action">
+        <a href="#" class="btn" id="modal-trigger" data-type="modal-trigger"><span class="icon-icons-02"></span></a>
+        <span class="cd-modal-bg"></span>
+      </div>
+     
+      <div class="cd-modal">
+        <div class="cd-modal-content">
+          <!-- modal content here -->
+          <div class="container settings"> 
+            <h1>Settings</h1>
+            <p>Not you? <a id="logout" href="#">Logout</a></p>
+
+          </div>
+        </div>
+      </div>
+     
+       <a href="#0" class="cd-modal-close">
+           <span class="icon-close"></span>
+        </a>
+    </section>
+
+
+    <div class="container">     
+      <div class="extraButtons">
+        <div class="callButton check-in" data-target="check-in">
+          <span class="icon-icons-05"></span>
+          <div id="geolocation">Not in a safe zone</div>
+          <h2>CHECK IN</h2>
+        </div>
+
+        <div class="callButton" data-target="emergency-services">
+          <span class="icon-icons-06"></span>
+          <h2>EMERGENCY SERVICES</h2>
+        </div>
+
+        <div class="callButton"  data-target="assistance">
+          <span class="icon-icons-03"></span>
+          <h2>UNI SERVICES</h2>
+        </div>
+
+        <div class="callButton" data-target="general-help">
+          <span class="icon-icons-04"></span>
+          <h2>GENERAL HELP</h2>
+        </div>
+      </div>
+
+      <div class="panicButton">
+        <span class="arrow"></span>
+        <div class="inner">
+          <h2>Slide up the panic button in case of an <strong>EMERGENCY</strong></h2>
+          <span class="icon-icons-01"></span>
+          <h1>PANIC BUTTON</h1>
+        </div>
+        <div class="not-activated panic-screen">
+          <div class="close-button">
+            <p>Cancel Alert</p>
+            <span class="icon-close"></span>
+          </div>
+
+          <div class="panic-explanation">
+            <div class="inner">
+              <h1>Help is on the way</h1>
+              <p>We have provided your location and info to the authorities</p>
+            </div>
+          </div>
+
+          <div class="panic-actions">
+            <div class="notify">
+              <div class="inner">
+                <span class="icon-assignment_ind"></span>
+                Notify your emergency contact
+              </div>
+            </div>
+
+
+            <div class="call">
+              <div class="inner">
+                <span class="icon-phone"></span>
+                Call 999
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="pages">
+        <!-- CHECK IN PAGE -->
+        <div id="check-in">
+        </div>
+        
+        
+        <!-- EMERGENCY SERVICES PAGE -->
+        <div id="emergency-services">
+          <div class="title">
+            <span class="icon-icons-06"></span>
+            <h2>EMERGENCY SERVICES</h2>
+            <span class="icon-close"></span>
+          </div>
+
+          <div class="inner-page">
+
+            <p>Tap any of the following buttons to make a phone call:</p>
+
+            <br>
+
+            <div class="make-a-call-button">
+              <h2>University's security staff</h2>
+            </div>
+            
+            <div class="make-a-call-button">
+              <h2>Ambulance/Fire/Police</h2>
+            </div>
+
+            <div class="make-a-call-button">
+              <h2>Gas Emergency</h2>
+            </div>
+
+            <div class="make-a-call-button">
+              <h2>NHS</h2>
+            </div>
+
+          </div>
+        </div>
+        
+  
+        <!-- ASK FOR ASSISTANCE PAGE -->
+        <div id="assistance">
+          <div class="title">
+            <span class="icon-icons-03"></span>
+            <h2>UNI SERVICES</h2>
+            <span class="icon-close"></span>
+          </div>
+
+          <div class="inner-page">
+
+            <p>Tap any of the following buttons to contact the following departments:</p>
+
+            <br>
+
+            <div class="make-a-call-button">
+              <h2>International Department</h2>
+            </div>
+            <div class="make-a-call-button">
+              <h2>Finance Department</h2>
+            </div>
+            <div class="make-a-call-button">
+              <h2>Wellbeing Department</h2>
+            </div>
+            <div class="make-a-call-button">
+              <h2>Security Department</h2>
+            </div>
+
+            <br>
+
+            <p>Or..</p>
+            <div class="ask-walkthrough">
+              Ask for a walkthrough through uni
+            </div>
+
+          </div>
+        </div>
+        
+
+        
+        
+        <!-- GENERAL HELP PAGE -->
+        <div id="general-help">
+          <div class="title">
+            <span class="icon-icons-04"></span>
+            <h2>GENERAL HELP</h2>
+            <span class="icon-close"></span>
+          </div>
+
+          <div class="inner-page">
+            <dl id="faq">
+              <h3>This is question 1?</h3>
+              <div>
+                <p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+              </div>
+              <h3>This is question 2?</h3>
+              <div>
+                <p>This is the answer to question #2.  Pellentesque habitant morbi....</p>
+              </div>
+              <h3>This is question 3?</h3>
+              <div>
+                <p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+              </div>
+              <h3>This is question 4?</h3>
+              <div>
+                <p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+              </div>
+              <h3>This is question 5?</h3>
+              <div>
+                <p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+              </div>
+              <h3>This is question 6?</h3>
+              <div>
+                <p>This is the answer to question #1.  Pellentesque habitant morbi....</p>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/fastClick.js"></script>
+    <script type="text/javascript" src="js/jquery-touch.js"></script>
+    <script type="text/javascript" src="js/velocity.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

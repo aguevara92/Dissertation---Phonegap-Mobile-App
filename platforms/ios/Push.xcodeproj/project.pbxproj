@@ -23,6 +23,13 @@
 		AF1FE30300E741F1B07C2AE2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BAA936E662416A8EA992DF /* CoreLocation.framework */; };
 		0BDA8F9B5CF74A72ACD96C04 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8FE400D3E44397A4E8A3F1 /* libstdc++.dylib */; };
 		06A42378DD034810BB0FDC53 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 015BFEB323E24C1EA26FDF8A /* libz.dylib */; };
+		852941379F8745CF981E598D /* DGGeofencing.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC9EE1AFA24F62A66DCA25 /* DGGeofencing.m */; };
+		0C08741BD58641F6A97863AE /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE957CD2DFF244F5921C01AE /* CDVLocation.m */; };
+		10E3E00B8D1048D68F72A433 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E50F4769E44506AB5ECACA /* CDVLogger.m */; };
+		A092ED7F5CB84DB889C86201 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EE1A521C884BC3B2ABB98F /* CDVStatusBar.m */; };
+		40026F82A4E349699DFDD42B /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEE163A64404954BF1209F1 /* CDVVibration.m */; };
+		CA495FA266024C6DB69AAAA7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016C141C1B404D229DDC9AB8 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FB7FEA10C2A34CBFB7E94E2F /* CFCallNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB95C9330C042089A641E07 /* CFCallNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +80,19 @@
 		C1BAA936E662416A8EA992DF /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		9D8FE400D3E44397A4E8A3F1 /* libstdc++.dylib */ = {isa = PBXFileReference; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
 		015BFEB323E24C1EA26FDF8A /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		D3FC9EE1AFA24F62A66DCA25 /* DGGeofencing.m */ = {isa = PBXFileReference; name = "DGGeofencing.m"; path = "com.ogonium.goldberg.dov.geofencing/DGGeofencing.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C7FE201E1A654BAF9818DC3E /* DGGeofencing.h */ = {isa = PBXFileReference; name = "DGGeofencing.h"; path = "com.ogonium.goldberg.dov.geofencing/DGGeofencing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DE957CD2DFF244F5921C01AE /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		69CE38121F6E4312B744EDC8 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		00E50F4769E44506AB5ECACA /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F8B034D3191D46B784A8B25E /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		58EE1A521C884BC3B2ABB98F /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		044C048B5DB64FCAB9A49964 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0FEE163A64404954BF1209F1 /* CDVVibration.m */ = {isa = PBXFileReference; name = "CDVVibration.m"; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0BFEEFD5EC184307AB4CA1FC /* CDVVibration.h */ = {isa = PBXFileReference; name = "CDVVibration.h"; path = "cordova-plugin-vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		016C141C1B404D229DDC9AB8 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		4DB95C9330C042089A641E07 /* CFCallNumber.m */ = {isa = PBXFileReference; name = "CFCallNumber.m"; path = "call-number/CFCallNumber.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		141343546FF64794ACA42481 /* CFCallNumber.h */ = {isa = PBXFileReference; name = "CFCallNumber.h"; path = "call-number/CFCallNumber.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +107,7 @@
 				AF1FE30300E741F1B07C2AE2 /* CoreLocation.framework in Frameworks */,
 				0BDA8F9B5CF74A72ACD96C04 /* libstdc++.dylib in Frameworks */,
 				06A42378DD034810BB0FDC53 /* libz.dylib in Frameworks */,
+				CA495FA266024C6DB69AAAA7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +184,7 @@
 				C1BAA936E662416A8EA992DF /* CoreLocation.framework */,
 				9D8FE400D3E44397A4E8A3F1 /* libstdc++.dylib */,
 				015BFEB323E24C1EA26FDF8A /* libz.dylib */,
+				016C141C1B404D229DDC9AB8 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +214,18 @@
 				A00D01DE53E84059B9CFE8E8 /* PushNotification.h */,
 				54D8F39E8D7149C19B244825 /* PushNotificationManager.h */,
 				FAC625A9DDF74D07B25712A0 /* PWLog.h */,
+				D3FC9EE1AFA24F62A66DCA25 /* DGGeofencing.m */,
+				C7FE201E1A654BAF9818DC3E /* DGGeofencing.h */,
+				DE957CD2DFF244F5921C01AE /* CDVLocation.m */,
+				69CE38121F6E4312B744EDC8 /* CDVLocation.h */,
+				00E50F4769E44506AB5ECACA /* CDVLogger.m */,
+				F8B034D3191D46B784A8B25E /* CDVLogger.h */,
+				58EE1A521C884BC3B2ABB98F /* CDVStatusBar.m */,
+				044C048B5DB64FCAB9A49964 /* CDVStatusBar.h */,
+				0FEE163A64404954BF1209F1 /* CDVVibration.m */,
+				0BFEEFD5EC184307AB4CA1FC /* CDVVibration.h */,
+				4DB95C9330C042089A641E07 /* CFCallNumber.m */,
+				141343546FF64794ACA42481 /* CFCallNumber.h */,
 			);
 			name = Plugins;
 			path = "Push/Plugins";
@@ -305,6 +339,12 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				DA13B7B3CF474927A561A951 /* PushNotification.m in Sources */,
+				852941379F8745CF981E598D /* DGGeofencing.m in Sources */,
+				0C08741BD58641F6A97863AE /* CDVLocation.m in Sources */,
+				10E3E00B8D1048D68F72A433 /* CDVLogger.m in Sources */,
+				A092ED7F5CB84DB889C86201 /* CDVStatusBar.m in Sources */,
+				40026F82A4E349699DFDD42B /* CDVVibration.m in Sources */,
+				FB7FEA10C2A34CBFB7E94E2F /* CFCallNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

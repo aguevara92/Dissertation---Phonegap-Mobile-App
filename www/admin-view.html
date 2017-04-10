@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Signup</title>
+        <meta name="description" content="Crimestoppers App">
+        <meta name="author" content="Andres Guevara">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="onDeviceReady()" class="admin">
+
+        <!--  SETTINGS MODAL  -->
+        <section class="cd-section">
+            <div class="cd-modal-action">
+                <a href="#" class="btn" id="modal-trigger" data-type="modal-trigger"><span class="icon-icons-02"></span></a>
+                <span class="cd-modal-bg"></span>
+            </div>
+
+            <div class="cd-modal">
+                <div class="cd-modal-content">
+                <!-- modal content here -->
+                    <div class="container settings"> 
+                        <h1>Settings</h1>
+                        <p>Not you? <a id="logout" href="#">Logout</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#0" class="cd-modal-close">
+               <span class="icon-close"></span>
+            </a>
+        </section>
+
+        <div class="container">  
+
+            <h3><i class="icon-icons-01"></i>Alerts active</h3>
+            <div id="list-alerts"></div>
+
+            <a id="view-old-alerts">View old alerts</a>
+
+
+            <h4>View checked in users</h4>
+
+            <div class=form-push>
+                <h4><i class="icon-textsms"></i>Send an alert to all the students</h4>
+                <form>
+                    <input id="message" type="text" placeholder="Message" tabindex="0"/>
+                    <button id="sendPushToAll">Send</button>
+                </form>
+            </div>
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/fastClick.js"></script>
+        <script type="text/javascript" src="js/velocity.min.js"></script>
+        <script type="text/javascript" src="js/modal.js"></script>
+        <script src="js/jquery-touch.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

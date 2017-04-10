@@ -1,7 +1,8 @@
 {
     "Security.framework": 1,
     "Storekit.framework": 1,
-    "CoreLocation.framework": 1,
+    "CoreLocation.framework": 3,
     "libstdc++.dylib": 1,
-    "libz.dylib": 1
+    "libz.dylib": 1,
+    "AudioToolbox.framework": 1
 }

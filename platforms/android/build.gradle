@@ -254,6 +254,7 @@ dependencies {
     compile "com.google.android.gms:play-services-location:+"
     compile "com.android.support:support-v4:+"
     compile "com.pushwoosh:pushwoosh:4.12.1"
+    compile "com.google.android.gms:play-services-gcm:7.5.0"
     // SUB-PROJECT DEPENDENCIES END
 }
 

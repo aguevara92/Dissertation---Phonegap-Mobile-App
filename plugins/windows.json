@@ -12,6 +12,30 @@
             "IOS_FOREGROUND_ALERT_TYPE": "NONE",
             "ANDROID_FOREGROUND_PUSH": "false",
             "PACKAGE_NAME": "Push"
+        },
+        "com.ogonium.goldberg.dov.geofencing": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "Push"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Push"
+        },
+        "call-number": {
+            "PACKAGE_NAME": "Push"
         }
     },
     "dependent_plugins": {}

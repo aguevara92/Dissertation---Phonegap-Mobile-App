@@ -56,5 +56,9 @@
     <string>DEBUG</string>
     <key>Pushwoosh_ALERT_TYPE</key>
     <string>NONE</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
   </dict>
 </plist>

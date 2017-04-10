@@ -12,4 +12,8 @@
     <engine name="android" spec="~6.1.2" />
     <engine name="ios" spec="~4.3.1" />
     <engine name="windows" spec="~4.4.3" />
+
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="mailto:*" />
+    
 </widget>

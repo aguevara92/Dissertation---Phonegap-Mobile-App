@@ -12,6 +12,30 @@
             "IOS_FOREGROUND_ALERT_TYPE": "NONE",
             "ANDROID_FOREGROUND_PUSH": "false",
             "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "com.ogonium.goldberg.dov.geofencing": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.aguevara.push"
+        },
+        "call-number": {
+            "PACKAGE_NAME": "com.aguevara.push"
         }
     },
     "dependent_plugins": {}

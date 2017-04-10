@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Signup</title>
+        <meta name="description" content="Crimestoppers App">
+        <meta name="author" content="Andres Guevara">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="onDeviceReady()" class="login">
+
+        <div class="container">  
+
+            <h1>Log in</h1>   
+            <form>
+                <input id="student_id" type="number" placeholder="Student ID" tabindex="0" data-dependency="password"/>
+                <input id="password" type="password" placeholder="password" tabindex="0" />
+                <button id="login">Login</button>
+            </form>
+
+            <p class="centered"> You don't have an account?</p>
+            <a class="centered" href="signup.html">Create an account</a>
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/firstIndex.js"></script>
+        <script type="text/javascript" src="js/fastClick.js"></script>
+        <script src="js/jquery-touch.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

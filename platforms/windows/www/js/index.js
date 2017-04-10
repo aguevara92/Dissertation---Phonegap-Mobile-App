@@ -19,6 +19,10 @@
 
 function onPushwooshInitialized(pushNotification) {
 
+    var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+    var student_id = localStorage.student_id;
+    //var student_id = '14435782';
+
     //if you need push token at a later time you can always get it from Pushwoosh plugin
     pushNotification.getPushToken(
         function(token) {
@@ -33,27 +37,20 @@ function onPushwooshInitialized(pushNotification) {
         }
     );
 
-    //settings tags
-    pushNotification.setTags({
-            tagName: "tagValue",
-            intTagName: 10
-        },
+
+    //sets a string tag “username” with value “john” and integer tag “deviceId” with value 10
+    pushNotification.setTags({studentID: student_id},
         function(status) {
-            console.info('setTags success: ' + JSON.stringify(status));
+            console.warn('setTags success');
         },
         function(status) {
             console.warn('setTags failed');
         }
     );
 
-    pushNotification.getTags(
-        function(status) {
-            console.info('getTags success: ' + JSON.stringify(status));
-        },
-        function(status) {
-            console.warn('getTags failed');
-        }
-    );
+    pushNotification.setUserId(student_id);
+
+    alert(student_id);
 
     //start geo tracking.
     //pushNotification.startLocationTracking();
@@ -79,13 +76,6 @@ function initPushwoosh() {
     );
 
     //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
-    /*
-    pushNotification.onDeviceReady({
-        projectid: "60756016005",
-        appid: "4FC89B6D14A655.46488481",
-        serviceName: ""
-    });
-    */
 
     pushNotification.onDeviceReady({
         projectid: "990461005412",
@@ -95,11 +85,10 @@ function initPushwoosh() {
     //register for push notifications
     pushNotification.registerDevice(
         function(status) {
-            document.getElementById("pushToken").innerHTML = status.pushToken + "<p>";
+            //alert(localStorage.student_id);
             onPushwooshInitialized(pushNotification);
         },
         function(status) {
-            alert("failed to register: " + status);
             console.warn(JSON.stringify(['failed to register ', status]));
         }
     );
