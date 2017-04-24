@@ -41,16 +41,15 @@ function onPushwooshInitialized(pushNotification) {
     //sets a string tag “username” with value “john” and integer tag “deviceId” with value 10
     pushNotification.setTags({studentID: student_id},
         function(status) {
+            alert("setTags success to " + student_id);
             console.warn('setTags success');
         },
         function(status) {
-            console.warn('setTags failed');
+            alert('setTags failed');
         }
     );
 
     pushNotification.setUserId(student_id);
-
-    alert(student_id);
 
     //start geo tracking.
     //pushNotification.startLocationTracking();

@@ -170,7 +170,7 @@ $('#callStudent').on("click", function() {
 
 // Call current student
 $('.make-a-call-button').on("click", function() {
-	var phone = this.getAttribute('data-myattr');
+	var phone = this.getAttribute('data-phone');
     window.open('tel:' + phone, '_system');
 });
 
@@ -312,7 +312,6 @@ $('.call').on( "click", function() {
 
 /** TRANSITION TO INSIDE PAGES **/
 $('.callButton:not(".check-in")').on( "click", function() {
-	console.log('transition');
 	$('body').addClass('inside-page');
 	
 	/** hide the panic button **/
@@ -330,7 +329,7 @@ $('.callButton:not(".check-in")').on( "click", function() {
     $(target).addClass('active');
 	
 	/** hide extra buttons **/
-	$('.callButton')
+	//$('.callButton')
 });
 
 
@@ -371,16 +370,15 @@ function onDeviceReady() {
 
     // onError Callback receives a PositionError object
     function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
+        //alert('code: '    + error.code    + '\n' +
+        //      'message: ' + error.message + '\n');
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onError); // call the function
 
     // Check if the point is inside the polygon (location)
     function checkSafeZone(){
 	    function inside(point, vs) {
-		    // ray-casting algorithm based on
-		    // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+		    // ray-casting algorithm 
 		    var x = point[0], y = point[1];
 		    var inside = false;
 		    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
@@ -448,27 +446,3 @@ $(document).ready(function(e) {
 
 
 
-
-$(function () {
-
-$('#UnRegisterP').click(function (e) {
-	alert("click");
-    var pushNotification = window.plugins.pushNotification;
-    swal("Un-Registration Complete!", "You will no longer recieve push notifications!", "success");
-    //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
-    pushNotification.onDeviceReady({ projectid: "990461005412", appid: "6265B-4F39E" });
-
-    //register for pushes
-    pushNotification.unregisterDevice(
-        function (status) {
-            var pushToken = status;
-            console.warn('push token: ' + pushToken);
-            swal("Un-Registration Complete!", "You will no longer recieve push notifications!", "success");
-        },
-        function (status) {
-            console.warn(JSON.stringify(['failed to register ', status]));
-            swal("Error: Registering...", "Something went wrong", "error");
-        }
-    );
-});
-});
